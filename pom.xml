@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.njx</groupId>
+    <artifactId>companyNJX</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <modules>
+        <module>janusgraph_part</module>
+        <module>NjxServer</module>
+        <module>Client</module>
+        <module>SwingPart</module>
+    </modules>
+    <properties>
+        <janusgraph.version>0.3.1</janusgraph.version>
+    </properties>
+
+    <dependencyManagement>
+        <!-- https://mvnrepository.com/artifact/org.janusgraph/janusgraph-core -->
+        <dependencies>
+            <dependency>
+                <groupId>org.janusgraph</groupId>
+                <artifactId>janusgraph-core</artifactId>
+                <version>${janusgraph.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.janusgraph/janusgraph-cassandra -->
+            <dependency>
+                <groupId>org.janusgraph</groupId>
+                <artifactId>janusgraph-cassandra</artifactId>
+                <version>${janusgraph.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.janusgraph/janusgraph-cql -->
+            <dependency>
+                <groupId>org.janusgraph</groupId>
+                <artifactId>janusgraph-cql</artifactId>
+                <version>${janusgraph.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.janusgraph/janusgraph-es -->
+            <dependency>
+                <groupId>org.janusgraph</groupId>
+                <artifactId>janusgraph-es</artifactId>
+                <version>${janusgraph.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.janusgraph/janusgraph-berkeleyje -->
+            <dependency>
+                <groupId>org.janusgraph</groupId>
+                <artifactId>janusgraph-berkeleyje</artifactId>
+                <version>${janusgraph.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
